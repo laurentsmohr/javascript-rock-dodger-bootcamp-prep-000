@@ -121,7 +121,7 @@ function endGame() {
     document.removeChild(rock);
   });
   ROCKS = [];
-  // remove "moveDodger" Event listener
+  window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
 }
 
@@ -148,7 +148,7 @@ function moveDodgerLeft() {
    * This function should move DODGER to the left
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
- 
+
   function step() {
     DODGER.style.left = `${left -= 4}px`
   };
