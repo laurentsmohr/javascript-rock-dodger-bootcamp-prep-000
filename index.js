@@ -16,9 +16,8 @@ var gameInterval = null
  * Be aware of what's above this line,
  * but all of your work should happen below.
  */
-document.ready(function() {
-  START.addEventListener('click', function() { start() }, false);
-});
+
+START.addEventListener('click', function() { start() }, false);
 
 function checkCollision(rock) {
   // implement me!
@@ -180,4 +179,4 @@ function start() {
   gameInterval = setInterval(function() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
   }, 1000);
-}};
+};
